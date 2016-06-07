@@ -3,10 +3,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(function({ headers, hostname, url }, res, next) {
-  if (headers['x-forwarded-proto'] === 'http') {
-    next();
-  } else {
+  if (headers['x-forwarded-proto'] === 'https') {
     res.redirect(`http://${hostname}${url}`);
+  } else {
+    next();
   }
 });
 
