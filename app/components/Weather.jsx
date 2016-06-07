@@ -4,19 +4,19 @@ const WeatherMessage = require('WeatherMessage');
 const openWeatherMap = require('openWeatherMap');
 
 class Weather extends React.Component {
-  
+
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      isLoading: false,
-      location: '',
-      temperature: ''
+      isLoading   : false,
+      location    : '',
+      temperature : ''
     };
-    
+
     this.handleLocationSearch = this.handleLocationSearch.bind(this);
   }
-  
+
   render() {
     return (
       <div>
@@ -26,10 +26,10 @@ class Weather extends React.Component {
       </div>
     );
   }
-  
+
   renderMessage() {
     const { isLoading, location, temperature } = this.state;
-    
+
     if (isLoading) {
       return <h3>Fetching weather...</h3>
     } else if (temperature && location) {
@@ -40,11 +40,11 @@ class Weather extends React.Component {
       );
     }
   }
-  
+
   handleLocationSearch(location) {
-    
+
     this.setState({ isLoading: true });
-    
+
     openWeatherMap.getTemperatureForLocation(location)
       .then((temperature) => {
         this.setState({

@@ -1,7 +1,7 @@
 const React = require('react');
 const Nav = require('Nav');
 
-function Main({children}) {
+function Main({ children }) {
   return (
     <div>
       <Nav/>
