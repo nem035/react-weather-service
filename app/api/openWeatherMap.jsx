@@ -1,6 +1,6 @@
 const axios = require('axios');
 const {
-  BASE_URL,
+  API_URL,
   API_KEY
 } = require('./api');
 
@@ -9,7 +9,7 @@ module.exports = {
   getTemperatureForLocation(location) {
     const q = encodeURIComponent(location);
 
-    return axios.get(BASE_URL, {
+    return axios.get(API_URL, {
       params: {
         q,
         appid: API_KEY,
