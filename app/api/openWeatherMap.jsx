@@ -2,7 +2,7 @@ const axios = require('axios');
 const {
   BASE_URL,
   API_KEY
-} = require('_api');
+} = require('./api');
 
 module.exports = {
 
