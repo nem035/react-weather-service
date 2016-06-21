@@ -6,7 +6,7 @@ function WeatherMessage({ location, temperature }) {
 
 WeatherMessage.propTypes = {
   location: React.PropTypes.string.isRequired,
-  temperature: React.PropTypes.string.isRequired,
+  temperature: React.PropTypes.number.isRequired,
 };
 
 module.exports = WeatherMessage;
