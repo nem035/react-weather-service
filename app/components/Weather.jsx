@@ -34,17 +34,26 @@ class Weather extends React.Component {
   }
 
   renderMessage() {
-    const { isLoading, location, temperature } = this.state;
+    const {
+      isLoading,
+      location,
+      temperature,
+    } = this.state;
 
     if (isLoading) {
       return <h3>Fetching weather...</h3>;
     }
-    return (
-      <WeatherMessage
-        location={location}
-        temperature={temperature}
-      />
-    );
+
+    if (location) {
+      return (
+        <WeatherMessage
+          location={location}
+          temperature={temperature}
+        />
+      );
+    }
+
+    return <div />;
   }
 
   render() {

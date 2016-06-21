@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "deploy": "git push heroku master",
+    "dev": "webpack -w",
     "git": "npm run build && git add --all && git commit -am \"$(date)\"",
     "major": "npm run git && npm version major && npm run push",
     "minor": "npm run git && npm version minor && npm run push",
