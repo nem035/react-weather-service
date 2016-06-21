@@ -6,11 +6,15 @@ const {
   IndexRoute,
   hashHistory,
 } = require('react-router');
-
 const Main = require('Main');
 const Weather = require('Weather');
 const About = require('About');
 const Examples = require('Examples');
+
+// load foundation
+require('style!css!foundation-sites/dist/foundation.min.css');
+const $ = require('jquery');
+$(document).foundation();
 
 // DOM Rendering
 ReactDOM.render(
