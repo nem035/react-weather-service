@@ -1568,7 +1568,7 @@
 /* 254 */
 /***/ function(module, exports) {
 
-	eval("'use strict';\n\nmodule.exports = {\n  API_KEY: 'e4340ac3a2ad5f0ab81c2e26a712e695',\n  API_URL: 'api.openweathermap.org/data/2.5/weather'\n};//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjU0LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2FwcC9hcGkvX2NvbmZpZy5qcz8wZDZkIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xuICBBUElfS0VZOiAnZTQzNDBhYzNhMmFkNWYwYWI4MWMyZTI2YTcxMmU2OTUnLFxuICBBUElfVVJMOiAnYXBpLm9wZW53ZWF0aGVybWFwLm9yZy9kYXRhLzIuNS93ZWF0aGVyJ1xufTtcblxuXG5cbi8qKiBXRUJQQUNLIEZPT1RFUiAqKlxuICoqIGFwcC9hcGkvX2NvbmZpZy5qc1xuICoqLyJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBO0FBQ0E7QUFGQSIsInNvdXJjZVJvb3QiOiIifQ==");
+	eval("'use strict';\n\nmodule.exports = {\n  API_KEY: 'e4340ac3a2ad5f0ab81c2e26a712e695',\n  API_URL: 'http://api.openweathermap.org/data/2.5/weather'\n};//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMjU0LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2FwcC9hcGkvX2NvbmZpZy5qcz8wZDZkIl0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xuICBBUElfS0VZOiAnZTQzNDBhYzNhMmFkNWYwYWI4MWMyZTI2YTcxMmU2OTUnLFxuICBBUElfVVJMOiAnaHR0cDovL2FwaS5vcGVud2VhdGhlcm1hcC5vcmcvZGF0YS8yLjUvd2VhdGhlcidcbn07XG5cblxuXG4vKiogV0VCUEFDSyBGT09URVIgKipcbiAqKiBhcHAvYXBpL19jb25maWcuanNcbiAqKi8iXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBRkEiLCJzb3VyY2VSb290IjoiIn0=");
 
 /***/ },
 /* 255 */
