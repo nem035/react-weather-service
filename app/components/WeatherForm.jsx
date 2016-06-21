@@ -37,4 +37,8 @@ class WeatherForm extends React.Component {
   }
 }
 
+WeatherForm.propTypes = {
+  onLocationSearch: React.PropTypes.func.isRequired,
+};
+
 module.exports = WeatherForm;
