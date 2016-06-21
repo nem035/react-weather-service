@@ -1,7 +1,7 @@
 const axios = require('axios');
 const {
   API_URL,
-  API_KEY
+  API_KEY,
 } = require('./api');
 
 module.exports = {
@@ -13,17 +13,22 @@ module.exports = {
       params: {
         q,
         appid: API_KEY,
-        units: 'metric'
-      }
+        units: 'metric',
+      },
     }).then(({ data }) => {
-        const { cod, message, main } = data;
-        if (cod && message) {
-          throw new Error(message);
-        } else {
-          return main.temp;
-        }
-      }, ({ data }) => {
-        throw new Error(data.message);
-      });
-  }
+      const {
+        cod,
+        message,
+        main,
+      } = data;
+
+      if (cod && message) {
+        throw new Error(message);
+      } else {
+        return main.temp;
+      }
+    }, ({ data }) => {
+      throw new Error(data.message);
+    });
+  },
 };

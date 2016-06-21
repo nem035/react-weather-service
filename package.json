@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "deploy": "heroku deploy",
+    "deploy": "git push heroku master",
     "git": "npm run build && git add --all && git commit -am \"$(date)\"",
     "major": "npm run git && npm version major && npm run push",
     "minor": "npm run git && npm version minor && npm run push",

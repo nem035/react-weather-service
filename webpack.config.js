@@ -2,7 +2,7 @@ module.exports = {
   entry: './app/app.jsx',
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    filename: './public/bundle.js',
   },
   resolve: {
     root: __dirname,
@@ -16,19 +16,19 @@ module.exports = {
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
       // api
-      openWeatherMap: 'app/api/openWeatherMap.jsx'
+      openWeatherMap: 'app/api/openWeatherMap.jsx',
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
   },
   module: {
     loaders: [{
       loader: 'babel-loader',
       query: {
-        presets: ['react', 'es2015']
+        presets: ['react', 'es2015'],
       },
       test: /\.jsx?$/,
-      exclude: /(node_modules|bower_components)/
-    }]
+      exclude: /(node_modules|bower_components)/,
+    }],
   },
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map',
 };
