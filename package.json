@@ -1,11 +1,18 @@
 {
   "name": "react-playground",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "webpack",
+    "deploy": "heroku deploy",
+    "git": "npm run build && git add --all && git commit -am \"$(date)\"",
+    "major": "npm run git && npm version major && npm run push",
+    "minor": "npm run git && npm version minor && npm run push",
+    "patch": "npm run git && npm version patch && npm run push",
+    "push": "git push origin master --tags",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nemanja Stojanovic",
   "license": "MIT",

@@ -1,3 +1,3 @@
-# My React Playground
+# React Weather
 
-Just me messing around with react
+Simple Weather Service in React
