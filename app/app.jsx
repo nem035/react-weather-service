@@ -16,6 +16,9 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 const $ = require('jquery');
 $(document).foundation();
 
+// load custom css
+require('style!css!applicationStyles');
+
 // DOM Rendering
 ReactDOM.render(
   <Router history={hashHistory}>

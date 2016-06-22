@@ -28,7 +28,7 @@ class WeatherForm extends React.Component {
       <div>
         <form onSubmit={this.onFormSubmit}>
           <input
-            type="text"
+            type="search"
             placeholder="Enter a location...e.g. Miami"
             ref="locationInput"
           />
