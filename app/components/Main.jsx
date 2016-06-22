@@ -5,8 +5,11 @@ function Main({ children }) {
   return (
     <div>
       <Nav />
-      <h2>Main Component</h2>
-      {children}
+      <div className="row">
+        <div className="columns medium-8 large-6 small-centered">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
