@@ -1,7 +1,7 @@
 const React = require('react');
 
 function WeatherMessage({ location, temperature }) {
-  return <h4>Its {temperature} in {location}</h4>;
+  return <h4 className="text-center">Its {temperature} in {location}</h4>;
 }
 
 WeatherMessage.propTypes = {

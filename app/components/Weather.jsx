@@ -10,6 +10,7 @@ class Weather extends React.Component {
 
     this.state = {
       isLoading: false,
+      errorMessage: false,
       location: '',
       temperature: '',
     };
@@ -18,7 +19,10 @@ class Weather extends React.Component {
   }
 
   handleLocationSearch(location) {
-    this.setState({ isLoading: true });
+    this.setState({
+      isLoading: true,
+      errorMessage: '',
+    });
 
     openWeatherMap.getTemperatureForLocation(location)
       .then((temperature) => {
@@ -27,21 +31,33 @@ class Weather extends React.Component {
           location,
           temperature,
         });
-      }, (errorMessage) => {
-        this.setState({ isLoading: false });
-        alert(errorMessage);
+      }, ({ message: errorMessage }) => {
+        this.setState({
+          isLoading: false,
+          errorMessage,
+        });
       });
   }
 
   renderMessage() {
     const {
       isLoading,
+      errorMessage,
       location,
       temperature,
     } = this.state;
 
     if (isLoading) {
-      return <h3>Fetching weather...</h3>;
+      return <h3 className="text-center subheader"><em>Fetching weather...</em></h3>;
+    }
+
+    if (errorMessage) {
+      return (
+        <div className="callout warning">
+          <h5>Oops!</h5>
+          <p>{errorMessage}</p>
+        </div>
+      );
     }
 
     if (location) {
@@ -59,7 +75,7 @@ class Weather extends React.Component {
   render() {
     return (
       <div>
-        <h3>Weather</h3>
+        <h1 className="text-center">Weather</h1>
         <WeatherForm onLocationSearch={this.handleLocationSearch} />
         {this.renderMessage()}
       </div>
