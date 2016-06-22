@@ -10,7 +10,7 @@ class Weather extends React.Component {
 
     this.state = {
       isLoading: false,
-      errorMessage: false,
+      errorMessage: '',
       location: '',
       temperature: '',
     };
