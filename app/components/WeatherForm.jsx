@@ -14,8 +14,10 @@ class WeatherForm extends React.Component {
     const { locationInput } = this.refs;
 
     const {
-      value: location,
+      value,
     } = locationInput;
+
+    const location = value.trim();
 
     if (location.length > 0) {
       locationInput.value = '';

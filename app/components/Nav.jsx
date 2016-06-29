@@ -3,9 +3,26 @@ const { Link, IndexLink } = require('react-router');
 
 class Nav extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.onSearch = this.onSearch.bind(this);
+  }
+
   onSearch(event) {
     event.preventDefault();
-    alert('Not Yet Implemented');
+
+    const { searchInput } = this.refs;
+
+    const {
+      value,
+    } = searchInput;
+
+    const location = encodeURIComponent(value.trim());
+
+    if (location.length > 0) {
+      searchInput.value = '';
+      window.location.hash = `#/?location=${location}`;
+    }
   }
 
   render() {
@@ -52,6 +69,7 @@ class Nav extends React.Component {
                 <input
                   type="search"
                   placeholder="Enter a location"
+                  ref="searchInput"
                 />
               </li>
               <li>

@@ -18,10 +18,29 @@ class Weather extends React.Component {
     this.handleLocationSearch = this.handleLocationSearch.bind(this);
   }
 
+  componentDidMount() {
+    const { location } = this.props.location.query;
+    this.handleLocationSearchFromURL(location);
+  }
+
+  componentWillReceiveProps(newProps) {
+    const { location } = newProps.location.query;
+    this.handleLocationSearchFromURL(location);
+  }
+
+  handleLocationSearchFromURL(location) {
+    if (location && typeof location === 'string') {
+      this.handleLocationSearch(location);
+      window.location.hash = '#/';
+    }
+  }
+
   handleLocationSearch(location) {
     this.setState({
       isLoading: true,
       errorMessage: '',
+      location: '',
+      temperature: '',
     });
 
     openWeatherMap.getTemperatureForLocation(location)
@@ -82,5 +101,9 @@ class Weather extends React.Component {
     );
   }
 }
+
+Weather.propTypes = {
+  location: React.PropTypes.object.isRequired,
+};
 
 module.exports = Weather;
