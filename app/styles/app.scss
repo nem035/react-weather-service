@@ -1,0 +1,10 @@
+$margin-large: 2.5rem;
+
+h1.page-title {
+  margin-top: $margin-large;
+  margin-bottom: $margin-large;
+}
+
+input[type="search"] {
+  box-shadow: none;
+}
